@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Registro Usuarios | SGSC INCES</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet" href="/static/registro.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar-modern">
+
+        <div>
+
+            <div class="brand-section">
+                <div class="brand-logo">
+                    <img src="/static/img/logo.png" alt="Logo INCES">
+                </div>
+            </div>
+
+
+
+            <nav class="sidebar-menu">
+
+                <a href="/templates/dashboard.html" class="menu-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    Dashboard
+                </a>
+
+                <a href="/templates/menu_comedor.html" class="menu-link">
+                    <i class="bi bi-fork-knife"></i>
+                    Menú comedor
+                </a>
+
+                <a href="/templates/reporte_consumo.html" class="menu-link">
+                    <i class="bi bi-bar-chart-fill"></i>
+                    Reporte consumo
+                </a>
+
+                <a href="/templates/registro.html" class="menu-link active">
+                    <i class="bi bi-people-fill"></i>
+                    Registro usuarios
+                </a>
+
+            </nav>
+
+        </div>
+
+        <div class="sidebar-footer">
+
+            <button class="btn-sidebar primary">
+                <i class="bi bi-person-plus"></i>
+                Nuevo usuario
+            </button>
+
+            <button class="btn-sidebar secondary">
+                <i class="bi bi-box-arrow-left"></i>
+                Cerrar sesión
+            </button>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <div class="topbar">
+
+            <div>
+
+                <h1 class="page-title">
+                    Registro de Usuarios
+                </h1>
+
+                <p class="page-subtitle">
+                    Completa el formulario para registrar un nuevo usuario.
+                </p>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="status-pill success">
+                    <i class="bi bi-wifi"></i>
+                    Conectado
+                </div>
+
+                
+
+                <div class="admin-profile">
+
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=2563eb&color=fff">
+
+                    <div>
+                        <strong>Administrador</strong>
+                        <span>Super usuario</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CARD -->
+        <div class="register-wrapper">
+
+            <div class="form-layout">
+
+                <!-- FORMULARIO -->
+                <div>
+
+                    <!-- PERSONAL -->
+                    <div class="form-section">
+
+                        <div class="form-section-header">
+
+                            <div class="section-icon">
+                                <i class="bi bi-person"></i>
+                            </div>
+
+                            <div>
+                                <h4>Información personal</h4>
+                                <p>Datos básicos del usuario</p>
+                            </div>
+
+                        </div>
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label>Cédula</label>
+
+                                <div class="input-modern">
+                                    <i class="bi bi-card-text"></i>
+                                    <input type="text" placeholder="Ingresa la cédula">
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>Nombre</label>
+
+                                <div class="input-modern">
+                                    <i class="bi bi-person"></i>
+                                    <input type="text" placeholder="Ingresa el nombre">
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>Apellido</label>
+
+                                <div class="input-modern">
+                                    <i class="bi bi-person-badge"></i>
+                                    <input type="text" placeholder="Ingresa el apellido">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CONTACTO -->
+                    <div class="form-section">
+
+                        <div class="form-section-header">
+
+                            <div class="section-icon">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+
+                            <div>
+                                <h4>Información de contacto</h4>
+                                <p>Datos para comunicación</p>
+                            </div>
+
+                        </div>
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label>Correo electrónico</label>
+
+                                <div class="input-modern">
+                                    <i class="bi bi-at"></i>
+                                    <input type="email" placeholder="correo@ejemplo.com">
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>Ciudad</label>
+
+                                <div class="input-modern">
+                                    <i class="bi bi-geo-alt"></i>
+
+                                    <select>
+                                        <option>Selecciona la ciudad</option>
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>Estado</label>
+
+                                <div class="input-modern">
+                                    <i class="bi bi-flag"></i>
+
+                                    <select>
+                                        <option>Selecciona el estado</option>
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ACCESO -->
+                    <div class="form-section">
+
+                        <div class="form-section-header">
+
+                            <div class="section-icon">
+                                <i class="bi bi-shield-lock"></i>
+                            </div>
+
+                            <div>
+                                <h4>Acceso al sistema</h4>
+                                <p>Credenciales y permisos</p>
+                            </div>
+
+                        </div>
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label>Contraseña</label>
+
+                                <div class="input-modern">
+                                    <i class="bi bi-lock"></i>
+                                    <input type="password" placeholder="Ingresa la contraseña">
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>Confirmar contraseña</label>
+
+                                <div class="input-modern">
+                                    <i class="bi bi-shield-lock"></i>
+                                    <input type="password" placeholder="Confirma la contraseña">
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>Rol de usuario</label>
+
+                                <div class="input-modern">
+                                    <i class="bi bi-person-check"></i>
+
+                                    <select>
+                                        <option>Selecciona el rol</option>
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- BOTON -->
+                    <div class="form-footer">
+
+                        <button class="btn-register">
+
+                            <i class="bi bi-person-plus"></i>
+                            Registrar Usuario
+
+                        </button>
+
+                        <div class="login-link">
+
+                            ¿El usuario ya está registrado?
+                            <a href="/templates/dashboard.html">Volver al dashboard</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- PANEL DERECHO -->
+                <div class="user-preview">
+
+                    <div class="avatar-box">
+
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+                        <h5>Nuevo Usuario</h5>
+
+                        <p>
+                            Completa la información para crear una nueva cuenta en el sistema.
+                        </p>
+
+                    </div>
+
+                    <div class="permissions-box">
+
+                        <h6>Permisos y acceso</h6>
+
+                        <ul>
+
+                            <li>
+                                <i class="bi bi-check-circle"></i>
+                                Acceso al sistema de comedor
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle"></i>
+                                Visualización de reportes
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle"></i>
+                                Registro de consumos
+                            </li>
+
+                            <li>
+                                <i class="bi bi-check-circle"></i>
+                                Gestión de menú
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="security-box">
+
+                        <div class="security-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+
+                        <span>
+                            La información registrada está protegida y es confidencial.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

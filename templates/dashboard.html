@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SGSC INCES | Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body class="dashboard-body">
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar-modern">
+
+        <div>
+
+            <!-- LOGO -->
+            <div class="brand-section">
+                <div class="brand-logo">
+                    <img src="/static/img/logo.png" alt="Logo INCES">
+                </div>
+            </div>
+            <!-- MENU -->
+            <nav class="sidebar-menu">
+
+                <a href="/templates/dashboard.html" class="menu-link active">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    Dashboard
+                </a>
+
+                <a href="/templates/menu_general.html" class="menu-link">
+                    <i class="bi bi-calendar2-week-fill"></i>
+                    Menú general
+                </a>
+
+                <a href="/templates/reporte_consumo.html" class="menu-link">
+                    <i class="bi bi-clipboard-data-fill"></i>
+                    Reporte consumo
+                </a>
+
+                <a href="/templates/usuarios_externos.html" class="menu-link">
+                    <i class="bi bi-people-fill"></i>
+                    Usuarios externos
+                </a>
+
+            </nav>
+        </div>
+
+        <!-- BOTONES -->
+        <div class="sidebar-footer">
+
+            <a href="/templates/registro.html" class="btn btn-primary btn-modern w-100">
+                <i class="bi bi-person-plus-fill"></i>
+                Registrar Usuario
+            </a>
+
+            <button class="btn btn-light btn-modern-outline w-100 mt-3">
+                <i class="bi bi-box-arrow-right"></i>
+                Cerrar sesión
+            </button>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <div class="topbar">
+
+            <div>
+                <h1 class="page-title">
+                    Sistema Comedor 
+                </h1>
+
+                <p class="page-subtitle">
+                    Vista administrativa para la gestión diaria del comedor institucional.
+                </p>
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="status-pill success">
+                    <i class="bi bi-wifi"></i>
+                    Conectado
+                </div>
+
+
+                <div class="admin-profile">
+
+                    <img src="https://ui-avatars.com/api/?name=Administrador&background=2563eb&color=fff"
+                    alt="admin">
+
+                    <div>
+                        <strong>Administrador</strong>
+                        <span>Super usuario</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RESUMEN -->
+        <section class="dashboard-card">
+
+            <div class="section-header">
+
+                <div>
+                    <h3>Resumen del día</h3>
+                    <p>Jueves 21 de mayo de 2026</p>
+                </div>
+
+                <div class="menu-tags">
+
+                    <span class="tag blue">Plato normal</span>
+                    <span class="tag green">Plato dieta</span>
+                    <span class="tag orange">Plato especial</span>
+
+                </div>
+
+            </div>
+
+            <!-- STATS -->
+            <div class="stats-grid">
+
+                <div class="stats-card stats-primary">
+
+                    <div class="stats-top">
+
+                        <div class="stats-icon">
+                            <i class="bi bi-cup-hot-fill"></i>
+                        </div>
+
+                        <i class="bi bi-arrow-right-short stats-arrow"></i>
+
+                    </div>
+
+                    <h6>CANTIDAD NORMAL</h6>
+
+                    <h2>120</h2>
+
+                    <span>Platos servidos</span>
+
+                </div>
+
+                <div class="stats-card stats-success">
+
+                    <div class="stats-top">
+
+                        <div class="stats-icon">
+                            <i class="bi bi-heart-pulse-fill"></i>
+                        </div>
+
+                        <i class="bi bi-arrow-right-short stats-arrow"></i>
+
+                    </div>
+
+                    <h6>CANTIDAD DIETA</h6>
+
+                    <h2>48</h2>
+
+                    <span>Platos servidos</span>
+
+                </div>
+
+                <div class="stats-card stats-warning">
+
+                    <div class="stats-top">
+
+                        <div class="stats-icon">
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+
+                        <i class="bi bi-arrow-right-short stats-arrow"></i>
+
+                    </div>
+
+                    <h6>CANTIDAD ESPECIAL</h6>
+
+                    <h2>16</h2>
+
+                    <span>Platos servidos</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- MENUS -->
+        <section class="menu-grid">
+
+            <!-- NORMAL -->
+            <div class="menu-card">
+
+                <div class="menu-header blue-border">
+
+                    <div class="menu-title">
+
+                        <div class="menu-icon blue-bg">
+                            <i class="bi bi-fork-knife"></i>
+                        </div>
+
+                        <div>
+                            <h4>Plato normal</h4>
+                            <p>Componentes del menú regular.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="food-list">
+
+                    <div class="food-item">
+                        <div class="food-info">
+                            <i class="bi bi-egg-fried"></i>
+                            <span>Proteína principal</span>
+                        </div>
+
+                        <div class="food-badge blue">
+                            Pollo
+                        </div>
+                    </div>
+
+                    <div class="food-item">
+                        <div class="food-info">
+                            <i class="bi bi-basket2-fill"></i>
+                            <span>Carbohidrato</span>
+                        </div>
+
+                        <div class="food-badge gray">
+                            Arroz
+                        </div>
+                    </div>
+
+                    <div class="food-item">
+                        <div class="food-info">
+                            <i class="bi bi-flower1"></i>
+                            <span>Verduras / Ensalada</span>
+                        </div>
+
+                        <div class="food-badge green">
+                            Ensalada
+                        </div>
+                    </div>
+
+                    <div class="food-item">
+                        <div class="food-info">
+                            <i class="bi bi-apple"></i>
+                            <span>Postre</span>
+                        </div>
+
+                        <div class="food-badge orange">
+                            Fruta
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- DIETA -->
+            <div class="menu-card">
+
+                <div class="menu-header green-border">
+
+                    <div class="menu-title">
+
+                        <div class="menu-icon green-bg">
+                            <i class="bi bi-heart-pulse-fill"></i>
+                        </div>
+
+                        <div>
+                            <h4>Plato dieta</h4>
+                            <p>Componentes del menú dietético.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="food-list">
+
+                    <div class="food-item">
+                        <div class="food-info">
+                            <i class="bi bi-egg-fried"></i>
+                            <span>Proteína principal</span>
+                        </div>
+
+                        <div class="food-badge blue">
+                            Pavo
+                        </div>
+                    </div>
+
+                    <div class="food-item">
+                        <div class="food-info">
+                            <i class="bi bi-basket2-fill"></i>
+                            <span>Carbohidrato</span>
+                        </div>
+
+                        <div class="food-badge gray">
+                            Quinoa
+                        </div>
+                    </div>
+
+                    <div class="food-item">
+                        <div class="food-info">
+                            <i class="bi bi-flower1"></i>
+                            <span>Verduras / Ensalada</span>
+                        </div>
+
+                        <div class="food-badge green">
+                            Brócoli
+                        </div>
+                    </div>
+
+                    <div class="food-item">
+                        <div class="food-info">
+                            <i class="bi bi-cup-straw"></i>
+                            <span>Adicional</span>
+                        </div>
+
+                        <div class="food-badge orange">
+                            Yogur
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+
+            <div>
+                © 2026 INCES - Sistema de Gestión de Servicios de Comedor
+            </div>
+
+            <div class="footer-right">
+                <span>Versión 1.0.0</span>
+                <span>Tema claro</span>
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

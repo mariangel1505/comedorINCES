@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SGSC INCES | Menú Comedor</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/menu.css">
+
+</head>
+
+<body class="dashboard-body">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar-modern">
+
+        <div>
+            <div class="brand-section">
+                <div class="brand-logo">
+                    <img src="/static/img/logo.png" alt="Logo INCES">
+                </div>
+            </div>
+            
+
+            <nav class="sidebar-menu">
+
+                <a href="/templates/dashboard.html" class="menu-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    Dashboard
+                </a>
+
+                <a href="/templates/menu_comedor.html" class="menu-link active">
+                    <i class="bi bi-fork-knife"></i>
+                    Menú Comedor
+                </a>
+
+                <a href="/templates/reporte_consumo.html" class="menu-link">
+                    <i class="bi bi-clipboard-data-fill"></i>
+                    Reporte Consumo
+                </a>
+
+                <a href="/templates/usuarios_externos.html" class="menu-link">
+                    <i class="bi bi-people-fill"></i>
+                    Usuarios Externos
+                </a>
+
+            </nav>
+
+        </div>
+
+        <div class="sidebar-footer">
+
+            <a href="/templates/registro.html" class="btn btn-primary btn-modern w-100">
+                <i class="bi bi-person-plus-fill"></i>
+                Registrar Usuario
+            </a>
+
+            <button class="btn btn-light btn-modern-outline w-100 mt-3">
+                <i class="bi bi-box-arrow-right"></i>
+                Cerrar Sesión
+            </button>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <div class="topbar">
+
+            <div class="d-flex align-items-center gap-3">
+
+                <div>
+                    <h1 class="page-title">
+                        Menú Comedor
+                    </h1>
+
+                    <p class="page-subtitle">
+                        Gestión y planificación semanal de menús
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="status-pill success">
+                    <i class="bi bi-wifi"></i>
+                    Conectado
+                </div>
+
+                
+
+                <div class="admin-profile">
+
+                    <img src="https://ui-avatars.com/api/?name=Administrador&background=2563eb&color=fff"
+                    alt="admin">
+
+                    <div>
+                        <strong>Administrador</strong>
+                        <span>Super usuario</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- MENU NORMAL -->
+        <section class="menu-week-section">
+
+            <div class="menu-week-header">
+
+                <div class="menu-week-title">
+
+                    <div class="menu-week-icon blue-bg">
+                        <i class="bi bi-fork-knife"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>Menú Normal</h3>
+
+                        <p>
+                            Planificación semanal del menú tipo normal
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <button class="btn btn-primary btn-modern">
+                    <i class="bi bi-floppy"></i>
+                    Guardar Cambios
+                </button>
+
+            </div>
+
+            <div class="week-grid">
+
+                <!-- LUNES -->
+                <div class="day-card-modern">
+
+                    <div class="day-header">
+
+                        <div>
+                            <h5>Lunes</h5>
+                            <span>21 Mayo 2026</span>
+                        </div>
+
+                        <i class="bi bi-sun weather-icon"></i>
+
+                    </div>
+
+                    <textarea class="menu-textarea"
+                    placeholder="Escriba aquí el menú del lunes...">Sopa de pollo
+Arroz blanco
+Pollo guisado
+Ensalada verde
+Fruta</textarea>
+
+                </div>
+
+                <!-- MARTES -->
+                <div class="day-card-modern">
+
+                    <div class="day-header">
+
+                        <div>
+                            <h5>Martes</h5>
+                            <span>22 Mayo 2026</span>
+                        </div>
+
+                        <i class="bi bi-cloud-sun weather-icon"></i>
+
+                    </div>
+
+                    <textarea class="menu-textarea"
+                    placeholder="Escriba aquí el menú del martes...">Sopa de verduras
+Arroz con zanahoria
+Carne en salsa
+Ensalada de repollo
+Gelatina</textarea>
+
+                </div>
+
+                <!-- MIERCOLES -->
+                <div class="day-card-modern">
+
+                    <div class="day-header">
+
+                        <div>
+                            <h5>Miércoles</h5>
+                            <span>23 Mayo 2026</span>
+                        </div>
+
+                        <i class="bi bi-cloud weather-icon"></i>
+
+                    </div>
+
+                    <textarea class="menu-textarea"
+                    placeholder="Escriba aquí el menú del miércoles...">Crema de zapallo
+Arroz blanco
+Pescado al horno
+Ensalada mixta
+Fruta</textarea>
+
+                </div>
+
+                <!-- JUEVES -->
+                <div class="day-card-modern">
+
+                    <div class="day-header">
+
+                        <div>
+                            <h5>Jueves</h5>
+                            <span>24 Mayo 2026</span>
+                        </div>
+
+                        <i class="bi bi-sun weather-icon"></i>
+
+                    </div>
+
+                    <textarea class="menu-textarea"
+                    placeholder="Escriba aquí el menú del jueves...">Sopa de fideos
+Arroz con maíz
+Pollo al horno
+Ensalada de tomate
+Yogur</textarea>
+
+                </div>
+
+                <!-- VIERNES -->
+                <div class="day-card-modern">
+
+                    <div class="day-header">
+
+                        <div>
+                            <h5>Viernes</h5>
+                            <span>25 Mayo 2026</span>
+                        </div>
+
+                        <i class="bi bi-cloud-sun weather-icon"></i>
+
+                    </div>
+
+                    <textarea class="menu-textarea"
+                    placeholder="Escriba aquí el menú del viernes...">Crema de auyama
+Arroz blanco
+Carne mechada
+Ensalada de lechuga
+Fruta</textarea>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- MENU DIETA -->
+        <section class="menu-week-section green-section">
+
+            <div class="menu-week-header">
+
+                <div class="menu-week-title">
+
+                    <div class="menu-week-icon green-bg">
+                        <i class="bi bi-heart-pulse-fill"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>Menú Dieta</h3>
+
+                        <p>
+                            Planificación semanal del menú tipo dieta
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <button class="btn btn-success btn-modern">
+                    <i class="bi bi-floppy"></i>
+                    Guardar Cambios
+                </button>
+
+            </div>
+
+            <div class="week-grid">
+
+                <!-- LUNES -->
+                <div class="day-card-modern">
+
+                    <div class="day-header">
+
+                        <div>
+                            <h5>Lunes</h5>
+                            <span>21 Mayo 2026</span>
+                        </div>
+
+                        <i class="bi bi-sun weather-icon"></i>
+
+                    </div>
+
+                    <textarea class="menu-textarea"
+                    placeholder="Escriba aquí el menú del lunes...">Sopa de pollo
+Arroz blanco
+Pollo guisado
+Ensalada verde
+Fruta</textarea>
+
+                </div>
+
+                <!-- MARTES -->
+                <div class="day-card-modern">
+
+                    <div class="day-header">
+
+                        <div>
+                            <h5>Martes</h5>
+                            <span>22 Mayo 2026</span>
+                        </div>
+
+                        <i class="bi bi-cloud-sun weather-icon"></i>
+
+                    </div>
+
+                    <textarea class="menu-textarea"
+                    placeholder="Escriba aquí el menú del martes...">Sopa de verduras
+Arroz con zanahoria
+Carne en salsa
+Ensalada de repollo
+Gelatina</textarea>
+
+                </div>
+
+                <!-- MIERCOLES -->
+                <div class="day-card-modern">
+
+                    <div class="day-header">
+
+                        <div>
+                            <h5>Miércoles</h5>
+                            <span>23 Mayo 2026</span>
+                        </div>
+
+                        <i class="bi bi-cloud weather-icon"></i>
+
+                    </div>
+
+                    <textarea class="menu-textarea"
+                    placeholder="Escriba aquí el menú del miércoles...">Crema de zapallo
+Arroz blanco
+Pescado al horno
+Ensalada mixta
+Fruta</textarea>
+
+                </div>
+
+                <!-- JUEVES -->
+                <div class="day-card-modern">
+
+                    <div class="day-header">
+
+                        <div>
+                            <h5>Jueves</h5>
+                            <span>24 Mayo 2026</span>
+                        </div>
+
+                        <i class="bi bi-sun weather-icon"></i>
+
+                    </div>
+
+                    <textarea class="menu-textarea"
+                    placeholder="Escriba aquí el menú del jueves...">Sopa de fideos
+Arroz con maíz
+Pollo al horno
+Ensalada de tomate
+Yogur</textarea>
+
+                </div>
+
+                <!-- VIERNES -->
+                <div class="day-card-modern">
+
+                    <div class="day-header">
+
+                        <div>
+                            <h5>Viernes</h5>
+                            <span>25 Mayo 2026</span>
+                        </div>
+
+                        <i class="bi bi-cloud-sun weather-icon"></i>
+
+                    </div>
+
+                    <textarea class="menu-textarea"
+                    placeholder="Escriba aquí el menú del viernes...">Crema de auyama
+Arroz blanco
+Carne mechada
+Ensalada de lechuga
+Fruta</textarea>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

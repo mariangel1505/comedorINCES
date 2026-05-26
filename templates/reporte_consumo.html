@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SGSC INCES | Reporte Consumo</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/reporte.css">
+
+</head>
+
+<body class="dashboard-body">
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar-modern">
+
+        <div>
+
+            <div class="brand-section">
+                <div class="brand-logo">
+                    <img src="/static/img/logo.png" alt="Logo INCES">
+                </div>
+            </div>
+
+            <nav class="sidebar-menu">
+
+                <a href="/templates/dashboard.html" class="menu-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    Dashboard
+                </a>
+
+                <a href="/templates/menu_general.html" class="menu-link">
+                    <i class="bi bi-fork-knife"></i>
+                    Menú Comedor
+                </a>
+
+                <a href="/templates/reporte_consumo.html" class="menu-link active">
+                    <i class="bi bi-bar-chart-fill"></i>
+                    Reporte Consumo
+                </a>
+
+                <a href="/templates/usuarios_externos.html" class="menu-link">
+                    <i class="bi bi-people-fill"></i>
+                    Usuarios Externos
+                </a>
+
+            </nav>
+
+        </div>
+
+        <div class="sidebar-footer">
+
+            <button class="btn btn-primary btn-modern w-100">
+                <i class="bi bi-download"></i>
+                Exportar PDF
+            </button>
+
+            <button class="btn btn-light btn-modern-outline w-100 mt-3">
+                <i class="bi bi-file-earmark-excel"></i>
+                Exportar Excel
+            </button>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <div class="topbar">
+
+            <div>
+
+                <h1 class="page-title">
+                    Reporte de Consumo
+                </h1>
+
+                <p class="page-subtitle">
+                    Control administrativo y monitoreo del comedor institucional.
+                </p>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="status-pill success">
+                    <i class="bi bi-wifi"></i>
+                    Conectado
+                </div>
+
+                <div class="admin-profile">
+
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=2563eb&color=fff">
+
+                    <div>
+                        <strong>Administrador</strong>
+                        <span>Super usuario</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- FILTROS -->
+        <section class="dashboard-card mb-4">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h3>Filtros de búsqueda</h3>
+
+                    <p>
+                        Consulta reportes por fechas y tipos de menú.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="row g-3">
+
+                <div class="col-md-3">
+
+                    <label class="form-label">
+                        Fecha desde
+                    </label>
+
+                    <input type="date" class="form-control modern-input">
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <label class="form-label">
+                        Fecha hasta
+                    </label>
+
+                    <input type="date" class="form-control modern-input">
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <label class="form-label">
+                        Tipo de menú
+                    </label>
+
+                    <select class="form-select modern-input">
+
+                        <option>Todos</option>
+                        <option>Normal</option>
+                        <option>Dieta</option>
+                        <option>Especial</option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-md-3 d-flex align-items-end">
+
+                    <button class="btn btn-primary btn-modern w-100">
+
+                        <i class="bi bi-search"></i>
+                        Generar Reporte
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- KPIs -->
+        <section class="stats-grid">
+
+            <!-- CARD -->
+            <div class="stats-card stats-primary">
+
+                <div class="stats-top">
+
+                    <div class="stats-icon">
+                        <i class="bi bi-cup-hot-fill"></i>
+                    </div>
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </div>
+
+                <h6>TOTAL CONSUMOS</h6>
+
+                <h2>1.842</h2>
+
+                <span>Registros del mes</span>
+
+            </div>
+
+            <!-- CARD -->
+            <div class="stats-card stats-success">
+
+                <div class="stats-top">
+
+                    <div class="stats-icon">
+                        <i class="bi bi-heart-pulse-fill"></i>
+                    </div>
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </div>
+
+                <h6>MENÚ DIETA</h6>
+
+                <h2>412</h2>
+
+                <span>Platos dieta servidos</span>
+
+            </div>
+
+            <!-- CARD -->
+            <div class="stats-card stats-warning">
+
+                <div class="stats-top">
+
+                    <div class="stats-icon">
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </div>
+
+                <h6>MENÚ ESPECIAL</h6>
+
+                <h2>227</h2>
+
+                <span>Platos especiales</span>
+
+            </div>
+
+        </section>
+
+        <!-- TABLA -->
+        <section class="dashboard-card mt-4">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h3>Últimos consumos registrados</h3>
+
+                    <p>
+                        Historial reciente del sistema de comedor.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="table-responsive">
+
+                <table class="table modern-table align-middle">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Fecha</th>
+                            <th>Usuario</th>
+                            <th>Tipo Menú</th>
+                            <th>Turno</th>
+                            <th>Estado</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>21/05/2026</td>
+
+                            <td>
+                                Juan Pérez
+                            </td>
+
+                            <td>
+                                <span class="food-badge blue">
+                                    Normal
+                                </span>
+                            </td>
+
+                            <td>
+                                Almuerzo
+                            </td>
+
+                            <td>
+                                <span class="food-badge green">
+                                    Registrado
+                                </span>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>21/05/2026</td>
+
+                            <td>
+                                María Gómez
+                            </td>
+
+                            <td>
+                                <span class="food-badge orange">
+                                    Especial
+                                </span>
+                            </td>
+
+                            <td>
+                                Cena
+                            </td>
+
+                            <td>
+                                <span class="food-badge green">
+                                    Registrado
+                                </span>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>21/05/2026</td>
+
+                            <td>
+                                Carlos Ruiz
+                            </td>
+
+                            <td>
+                                <span class="food-badge gray">
+                                    Dieta
+                                </span>
+                            </td>
+
+                            <td>
+                                Almuerzo
+                            </td>
+
+                            <td>
+                                <span class="food-badge green">
+                                    Registrado
+                                </span>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
