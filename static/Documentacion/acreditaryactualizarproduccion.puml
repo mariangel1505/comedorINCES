@@ -1,0 +1,39 @@
+@startuml
+title Acreditación y Consumo de Usuario Invitado
+
+actor Operador
+
+participant "Sistema SGSC" as Sistema
+database "Base de Datos" as BD
+
+Operador -> Sistema : Consultar visitante
+
+Sistema -> BD : Verificar estado
+
+BD --> Sistema : Estado = Aprobado
+
+Sistema --> Operador : Acceso autorizado
+
+Operador -> Sistema : Registrar acreditación
+
+Sistema -> BD : Guardar acreditación
+
+alt Menú Normal
+
+    Sistema -> BD : Incrementar contador "normal"
+
+    BD -> Sistema : Actualizar Modulo "Normal"
+
+else Menú Dieta
+
+    Sistema -> BD : Incrementar contador "Dieta"
+
+    BD -> Sistema : Actualizar Modulo "Dieta"
+
+end
+
+Sistema -> BD : Registrar consumo
+
+Sistema --> Operador : Consumo registrado
+
+@enduml

@@ -40,23 +40,33 @@
 
                 <a href="/templates/dashboard.html" class="menu-link active">
                     <i class="bi bi-grid-1x2-fill"></i>
-                    Dashboard
+                    Inicio
+                </a>
+
+                <a href="/templates/comensales.html" class="menu-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    Comensales
                 </a>
 
                 <a href="/templates/menu_general.html" class="menu-link">
                     <i class="bi bi-calendar2-week-fill"></i>
-                    Menú general
+                    Menú General
                 </a>
 
                 <a href="/templates/reporte_consumo.html" class="menu-link">
                     <i class="bi bi-clipboard-data-fill"></i>
-                    Reporte consumo
+                    Reporte Consumo
                 </a>
 
                 <a href="/templates/usuarios_externos.html" class="menu-link">
                     <i class="bi bi-people-fill"></i>
-                    Usuarios externos
+                    Usuarios Invitados
                 </a>
+                <a href="/templates/evento.html" class="menu-link">
+                    <i class="bi bi-people-fill"></i>
+                    Eventos
+                </a>
+                
 
             </nav>
         </div>
@@ -69,10 +79,10 @@
                 Registrar Usuario
             </a>
 
-            <button class="btn btn-light btn-modern-outline w-100 mt-3">
+            <a href="/templates/login.html" class="btn btn-light btn-modern-outline w-100 mt-3">
                 <i class="bi bi-box-arrow-right"></i>
                 Cerrar sesión
-            </button>
+            </a>
 
         </div>
 
@@ -131,8 +141,8 @@
                 <div class="menu-tags">
 
                     <span class="tag blue">Plato normal</span>
-                    <span class="tag green">Plato dieta</span>
-                    <span class="tag orange">Plato especial</span>
+                    <span class="tag green">Plato especial</span>
+                    <span class="tag orange"> invitados</span>
 
                 </div>
 
@@ -173,7 +183,7 @@
 
                     </div>
 
-                    <h6>CANTIDAD DIETA</h6>
+                    <h6>CANTIDAD ESPECIAL</h6>
 
                     <h2>48</h2>
 
@@ -193,7 +203,7 @@
 
                     </div>
 
-                    <h6>CANTIDAD ESPECIAL</h6>
+                    <h6>CANTIDAD INVITADOS</h6>
 
                     <h2>16</h2>
 
@@ -201,9 +211,30 @@
 
                 </div>
 
-            </div>
+            <div class="stats-grid">
+
+                <div class="stats-card stats-primary">
+
+                    <div class="stats-top">
+
+                        <div class="stats-icon">
+                            <i class="bi bi-cup-hot-fill"></i>
+                        </div>
+
+                        <i class="bi bi-arrow-right-short stats-arrow"></i>
+
+                    </div>
+
+                    <h6>CANTIDAD EVENTO</h6>
+
+                    <h2>100</h2>
+
+                    <span>Platos servidos</span>
+
+                </div>
 
         </section>
+        
 
         <!-- MENUS -->
         <section class="menu-grid">
@@ -290,8 +321,8 @@
                         </div>
 
                         <div>
-                            <h4>Plato dieta</h4>
-                            <p>Componentes del menú dietético.</p>
+                            <h4>Plato Especial</h4>
+                            <p>Componentes del menú especial.</p>
                         </div>
 
                     </div>
@@ -349,20 +380,6 @@
             </div>
 
         </section>
-
-        <!-- FOOTER -->
-        <footer class="dashboard-footer">
-
-            <div>
-                © 2026 INCES - Sistema de Gestión de Servicios de Comedor
-            </div>
-
-            <div class="footer-right">
-                <span>Versión 1.0.0</span>
-                <span>Tema claro</span>
-            </div>
-
-        </footer>
 
     </main>
 

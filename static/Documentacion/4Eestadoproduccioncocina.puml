@@ -1,0 +1,24 @@
+@startuml
+title Estados de Producción de Cocina
+
+[*] --> EsperandoAcreditaciones
+
+EsperandoAcreditaciones --> ActualizandoContadores : Nueva acreditación
+
+ActualizandoContadores --> IncrementarMenuNormal : Menú normal
+
+ActualizandoContadores --> IncrementarMenuDieta : Menú dieta
+
+IncrementarMenuNormal --> EsperandoAcreditaciones
+
+IncrementarMenuDieta --> EsperandoAcreditaciones
+
+EsperandoAcreditaciones --> ProduccionLista : Hora de preparación
+
+ProduccionLista --> ServicioComedor
+
+ServicioComedor --> Finalizado
+
+Finalizado --> [*]
+
+@enduml

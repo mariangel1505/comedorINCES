@@ -1,0 +1,18 @@
+@startuml
+title Validación de Usuario Invitado para Comedor
+
+[*] --> Pendiente
+
+Pendiente --> Aprobado : Responsable autoriza
+
+Pendiente --> Rechazado : Responsable rechaza
+
+Aprobado --> Acreditado
+
+Acreditado --> Consumido
+
+Consumido --> [*]
+
+Rechazado --> [*]
+
+@enduml

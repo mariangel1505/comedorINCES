@@ -20,6 +20,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/static/reporte.css">
+    <link rel="stylesheet" href="/static/style.css">
 
 </head>
 
@@ -42,12 +43,17 @@
 
                 <a href="/templates/dashboard.html" class="menu-link">
                     <i class="bi bi-grid-1x2-fill"></i>
-                    Dashboard
+                    Inicio
+                </a>
+
+                <a href="/templates/comensales.html" class="menu-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    Comensales
                 </a>
 
                 <a href="/templates/menu_general.html" class="menu-link">
-                    <i class="bi bi-fork-knife"></i>
-                    Menú Comedor
+                    <i class="bi bi-calendar2-week-fill"></i>
+                    Menú General
                 </a>
 
                 <a href="/templates/reporte_consumo.html" class="menu-link active">
@@ -57,7 +63,12 @@
 
                 <a href="/templates/usuarios_externos.html" class="menu-link">
                     <i class="bi bi-people-fill"></i>
-                    Usuarios Externos
+                    Usuarios Invitados
+                </a>
+
+                <a href="/templates/evento.html" class="menu-link">
+                    <i class="bi bi-people-fill"></i>
+                    Eventos
                 </a>
 
             </nav>
@@ -162,15 +173,15 @@
                 <div class="col-md-3">
 
                     <label class="form-label">
-                        Tipo de menú
+                        Tipo de reporte
                     </label>
 
                     <select class="form-select modern-input">
 
-                        <option>Todos</option>
-                        <option>Normal</option>
-                        <option>Dieta</option>
-                        <option>Especial</option>
+                        <option>Consumos</option>
+                        <option>Invitados</option>
+                        <option>Jubilados</option>
+                        <option>Eventos</option>
 
                     </select>
 
@@ -228,11 +239,11 @@
 
                 </div>
 
-                <h6>MENÚ DIETA</h6>
+                <h6>MENÚ ESPECIAL</h6>
 
                 <h2>412</h2>
 
-                <span>Platos dieta servidos</span>
+                <span>Platos especiales servidos</span>
 
             </div>
 
@@ -249,11 +260,11 @@
 
                 </div>
 
-                <h6>MENÚ ESPECIAL</h6>
+                <h6>EXTERNOS</h6>
 
                 <h2>227</h2>
 
-                <span>Platos especiales</span>
+                <span>Platos externos</span>
 
             </div>
 
@@ -287,7 +298,6 @@
                             <th>Fecha</th>
                             <th>Usuario</th>
                             <th>Tipo Menú</th>
-                            <th>Turno</th>
                             <th>Estado</th>
 
                         </tr>
@@ -311,10 +321,6 @@
                             </td>
 
                             <td>
-                                Almuerzo
-                            </td>
-
-                            <td>
                                 <span class="food-badge green">
                                     Registrado
                                 </span>
@@ -324,27 +330,6 @@
 
                         <tr>
 
-                            <td>21/05/2026</td>
-
-                            <td>
-                                María Gómez
-                            </td>
-
-                            <td>
-                                <span class="food-badge orange">
-                                    Especial
-                                </span>
-                            </td>
-
-                            <td>
-                                Cena
-                            </td>
-
-                            <td>
-                                <span class="food-badge green">
-                                    Registrado
-                                </span>
-                            </td>
 
                         </tr>
 
@@ -362,9 +347,6 @@
                                 </span>
                             </td>
 
-                            <td>
-                                Almuerzo
-                            </td>
 
                             <td>
                                 <span class="food-badge green">

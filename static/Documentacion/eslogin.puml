@@ -1,0 +1,21 @@
+@startuml Diagrama_Estado_Login
+
+skinparam style strictuml
+
+[*] --> FormularioVacio
+
+FormularioVacio --> ValidandoCredenciales : Usuario ingresa datos y\npresiona "Iniciar Sesión"
+
+state ValidandoCredenciales {
+    [*] --> VerificandoDatos
+    VerificandoDatos --> EvaluandoResultado : BD retorna respuesta
+}
+
+ValidandoCredenciales --> SesionIniciada : [Credenciales Válidas]
+ValidandoCredenciales --> ErrorAutenticacion : [Cédula o Contraseña Incorrecta]
+
+ErrorAutenticacion --> FormularioVacio : Mostrar mensaje de error\ny limpiar campos
+
+SesionIniciada --> [*] : Redirigir al Inicio / Éxito
+
+@enduml

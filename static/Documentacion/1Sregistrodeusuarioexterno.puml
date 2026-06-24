@@ -1,0 +1,44 @@
+@startuml
+title Validación de Usuario Invitado para Servicio de Comedor
+
+actor Responsable
+
+participant "Sistema Control de Acceso" as Acceso
+participant "Sistema SGSC" as SGSC
+database "Base de Datos SGSC" as BD
+
+Acceso -> SGSC : Enviar datos de visitante registrado
+
+SGSC -> BD : Registrar visitante pendiente
+
+BD --> SGSC : Registro almacenado
+
+Responsable -> SGSC : Consultar visitantes pendientes
+
+SGSC -> BD : Buscar visitantes pendientes
+
+BD --> SGSC : Lista de visitantes
+
+SGSC --> Responsable : Mostrar visitantes
+
+alt Aprobar servicio de comedor
+
+    Responsable -> SGSC : Aprobar visitante
+
+    SGSC -> BD : Estado = Aprobado
+
+    BD --> SGSC : Confirmación
+
+else Rechazar servicio de comedor
+
+    Responsable -> SGSC : Rechazar visitante
+
+    SGSC -> BD : Estado = Rechazado
+
+    BD --> SGSC : Confirmación
+
+end
+
+SGSC --> Responsable : Resultado actualizado
+
+@enduml

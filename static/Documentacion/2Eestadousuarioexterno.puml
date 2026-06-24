@@ -1,0 +1,22 @@
+@startuml
+title Estados de Usuario Invitado
+
+[*] --> RegistradoCasilla
+
+RegistradoCasilla --> PendienteValidacion
+
+PendienteValidacion --> Aprobado : Aprobar acceso comedor
+
+PendienteValidacion --> Rechazado : Rechazar acceso comedor
+
+Aprobado --> Acreditado
+
+Acreditado --> Consumo
+
+Consumo --> Finalizado
+
+Finalizado --> [*]
+
+Rechazado --> [*]
+
+@enduml

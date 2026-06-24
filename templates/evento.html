@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestión de Eventos</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/evento.css">
+</head>
+<body class="dashboard-body">
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar-modern">
+
+        <div>
+
+            <!-- LOGO -->
+            <div class="brand-section">
+                <div class="brand-logo">
+                    <img src="/static/img/logo.png" alt="Logo INCES">
+                </div>
+            </div>
+            <!-- MENU -->
+            <nav class="sidebar-menu">
+
+                <a href="/templates/dashboard.html" class="menu-link ">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    Inicio
+                </a>
+
+                <a href="/templates/comensales.html" class="menu-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    Comensales
+                </a>
+
+                <a href="/templates/menu_general.html" class="menu-link">
+                    <i class="bi bi-calendar2-week-fill"></i>
+                    Menú General
+                </a>
+
+                <a href="/templates/reporte_consumo.html" class="menu-link">
+                    <i class="bi bi-clipboard-data-fill"></i>
+                    Reporte Consumo
+                </a>
+
+                <a href="/templates/usuarios_externos.html" class="menu-link">
+                    <i class="bi bi-people-fill"></i>
+                    Usuarios Invitados
+                </a>
+
+                <a href="/templates/evento.html" class="menu-link active">
+                    <i class="bi bi-people-fill"></i>
+                    Eventos
+                </a>
+
+            </nav>
+        </div>
+
+        <!-- BOTONES -->
+        <div class="sidebar-footer">
+
+            <a href="/templates/registro.html" class="btn btn-primary btn-modern w-100">
+                <i class="bi bi-person-plus-fill"></i>
+                Registrar Usuario
+            </a>
+
+            <a href="/templates/login.html" class="btn btn-light btn-modern-outline w-100 mt-3">
+                <i class="bi bi-box-arrow-right"></i>
+                Cerrar sesión
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+    <!-- TITULO -->
+    <div class="page-header mb-4">
+        <h2>
+            Eventos Especiales
+        </h2>
+        <p>Gestión de eventos y menús especiales</p>
+    </div>
+
+    <!-- TARJETAS SUPERIORES -->
+    <div class="row g-4 mb-4">
+
+        <div class="col-lg-3">
+            <div class="summary-card blue">
+                <div class="icon-box">
+                    <i class="bi bi-calendar-event"></i>
+                </div>
+
+                <div>
+                    <small>PRÓXIMO EVENTO</small>
+                    <h4>Día del Padre</h4>
+                    <p><i class="bi bi-calendar3"></i> 16/06/2026</p>
+                    <a href="#">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div class="summary-card green">
+                <div class="icon-box">
+                    <i class="bi bi-people-fill"></i>
+                </div>
+
+                <div>
+                    <small>PERSONAL BENEFICIADO</small>
+                    <h3>125</h3>
+                    <p>Personas con acceso</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div class="summary-card orange">
+                <div class="icon-box">
+                    <i class="bi bi-person-check-fill"></i>
+                </div>
+
+                <div>
+                    <small>REGISTRADOS PARA EVENTO</small>
+                    <h3>89</h3>
+                    <p>Personas registradas</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div class="summary-card purple">
+                <div class="icon-box">
+                    <i class="bi bi-cup-hot-fill"></i>
+                </div>
+
+                <div>
+                    <small>SERVIDOS</small>
+                    <h3>0</h3>
+                    <p>Aún por servir</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- SEGUNDA FILA -->
+    <div class="row g-4">
+
+        <!-- EVENTO -->
+        <div class="col-xl-3">
+
+            <div class="custom-card">
+
+                <h5>
+                    <i class="bi bi-calendar2-week"></i>
+                    1. Crear / Editar Evento
+                </h5>
+
+                <div class="mb-3">
+                    <label>Nombre del Evento</label>
+                    <input type="text" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label>Fecha</label>
+                    <input type="date" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label>Descripción</label>
+                    <textarea class="form-control"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label>Tipo de comida</label>
+                    <select class="form-select">
+                        <option>Desayuno</option>
+                        <option>Almuerzo</option>
+                        <option>Merienda</option>
+                        <option>Cena</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label>Estado</label>
+                    <select class="form-select">
+                        <option>Programado</option>
+                        <option>Activo</option>
+                        <option>Finalizado</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-primary w-100">
+                    Guardar Evento
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- MENU -->
+        <div class="col-xl-3">
+
+            <div class="custom-card">
+
+                <h5>
+                    <i class="bi bi-cup-straw"></i>
+                    2. Menú para el Evento
+                </h5>
+
+                <div class="mb-3">
+                    <label>Sopa</label>
+                    <input type="text" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label>Plato Principal</label>
+                    <input type="text" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label>Jugo</label>
+                    <input type="text" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label>Postre</label>
+                    <input type="text" class="form-control">
+                </div>
+
+                <button class="btn btn-success w-100">
+                    Guardar Menú
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- BENEFICIADOS -->
+        <div class="col-xl-3">
+
+            <div class="custom-card">
+
+                <h5>
+                    <i class="bi bi-person-check-fill"></i>
+                    3. Tipo de Personal Beneficiado
+                </h5>
+
+                <p class="text-muted small">
+                    Seleccione quién recibirá el beneficio.
+                </p>
+
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">Todos</label>
+                </div>
+
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">Padres</label>
+                </div>
+
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">Madres</label>
+                </div>
+
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">Administrativos</label>
+                </div>
+
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">Docentes</label>
+                </div>
+
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">Obreros</label>
+                </div>
+
+                <button class="btn btn-purple w-100 mt-4">
+                    Asignar Beneficio
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- REGISTRO -->
+        <div class="col-xl-3">
+
+            <div class="custom-card">
+
+                <h5>
+                    <i class="bi bi-person-plus-fill"></i>
+                    4. Registro Manual
+                    <p>(invitados/casos especiales)</p>
+                </h5>
+
+                <input class="form-control mb-3" placeholder="Cédula">
+                <input class="form-control mb-3" placeholder="Nombre">
+                <input class="form-control mb-3" placeholder="Apellido">
+
+                <button class="btn btn-primary w-100 mb-4">
+                    Agregar a la lista
+                </button>
+                
+                <P>Registros</P>
+
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>Cédula</th>
+                            <th>Nombre</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>12345678</td>
+                            <td>Juan</td>
+                            <td>
+                                <i class="bi bi-pencil-square text-primary"></i>
+                                <i class="bi bi-trash text-danger"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- TABLA -->
+    <div class="custom-card mt-4">
+
+        <div class="table-header">
+
+            <h5>
+                <i class="bi bi-people"></i>
+                5. Lista de Beneficiarios
+            </h5>
+
+            
+
+            <div class="table-actions">
+
+                <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Buscar...">
+
+                <select class="form-select">
+                    <option>Todos</option>
+                </select>
+
+                <button class="btn btn-primary">
+                    Actualizar
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="table-responsive">
+
+            <table class="table align-middle">
+
+                <thead>
+
+                    <tr>
+                        <th>Cédula</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Área</th>
+                        <th>Tipo</th>
+                        <th>Estado</th>
+                        <th>Fecha</th>
+                        <th>Acciones</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>12345678</td>
+                        <td>Juan</td>
+                        <td>Pérez</td>
+                        <td>RRHH</td>
+                        <td>Padres</td>
+
+                        <td>
+                            <span class="badge bg-warning">
+                                Pendiente
+                            </span>
+                        </td>
+
+                        <td>10/06/2026</td>
+
+                        <td>
+                            <button class="btn btn-sm btn-outline-primary">
+                                <i class="bi bi-eye"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>

@@ -77,12 +77,12 @@ body{
 
 .menu-link:hover{
     background:#eff6ff;
-    color:#2563eb;
+    color:#3560FF;
     transform:translateX(5px);
 }
 
 .menu-link.active{
-    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    background:linear-gradient(135deg,#3560FF,#3560FF);
     color:white;
     box-shadow:0 10px 25px rgba(37,99,235,.25);
 }
@@ -229,17 +229,17 @@ body{
 
 .tag.blue{
     background:#dbeafe;
-    color:#1d4ed8;
+    color:#3560FF;
 }
 
 .tag.green{
-    background:#dcfce7;
-    color:#15803d;
+    background:#dbeafe;
+    color:#3560FF;
 }
 
 .tag.orange{
-    background:#ffedd5;
-    color:#ea580c;
+    background:#dbeafe;
+    color:#3560FF;
 }
 
 /* STATS */
@@ -263,15 +263,15 @@ body{
 }
 
 .stats-primary{
-    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    background:linear-gradient(135deg,#3560FF,#3560FF);
 }
 
 .stats-success{
-    background:linear-gradient(135deg,#16a34a,#22c55e);
+    background:linear-gradient(135deg,#3560FF,#3560FF);
 }
 
 .stats-warning{
-    background:linear-gradient(135deg,#f59e0b,#f97316);
+    background:linear-gradient(135deg,#3560FF,#3560FF);
 }
 
 .stats-top{

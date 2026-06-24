@@ -1,0 +1,23 @@
+El Sistema de Gestión de Servicio de Comedor (SGSC INCES) está basado principalmente en el patrón arquitectónico Modelo-Vista-Controlador (MVC), el cual permite separar la lógica de negocio, la interfaz de usuario y el acceso a los datos. Adicionalmente, se emplea el patrón DAO (Data Access Object) para la gestión de la persistencia en PostgreSQL, favoreciendo la mantenibilidad, escalabilidad y reutilización del código.                
+
+                USUARIO
+                    │
+                    ▼
+             ┌───────────┐
+             │   VISTA   │
+             │  HTML/CSS │
+             └─────┬─────┘
+                   │
+                   ▼
+             ┌───────────┐
+             │CONTROLADOR│
+             │  Python   │
+             └─────┬─────┘
+                   │
+                   ▼
+             ┌───────────┐
+             │  MODELO   │
+             │PostgreSQL │
+             └───────────┘
+
+tabla auditoria. 

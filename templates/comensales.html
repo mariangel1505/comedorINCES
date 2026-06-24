@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SGSC INCES | Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/comensales.css" />
+</head>
+
+<body class="dashboard-body">
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar-modern">
+
+        <div>
+
+            <!-- LOGO -->
+            <div class="brand-section">
+                <div class="brand-logo">
+                    <img src="/static/img/logo.png" alt="Logo INCES">
+                </div>
+            </div>
+            <!-- MENU -->
+            <nav class="sidebar-menu">
+
+                <a href="/templates/dashboard.html" class="menu-link">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    Inicio
+                </a>
+
+                <a href="/templates/comensales.html" class="menu-link active">
+                    <i class="bi bi-people-fill"></i>
+                    Comensales
+                </a>
+
+                <a href="/templates/menu_general.html" class="menu-link">
+                    <i class="bi bi-calendar2-week-fill"></i>
+                    Menú General
+                </a>
+
+                <a href="/templates/reporte_consumo.html" class="menu-link">
+                    <i class="bi bi-clipboard-data-fill"></i>
+                    Reporte Consumo
+                </a>
+
+                <a href="/templates/usuarios_externos.html" class="menu-link">
+                    <i class="bi bi-people-fill"></i>
+                    Usuarios Invitados
+                </a>
+
+                <a href="/templates/evento.html" class="menu-link">
+                    <i class="bi bi-people-fill"></i>
+                    Eventos
+                </a>
+
+                
+
+            </nav>
+        </div>
+
+        <!-- BOTONES -->
+        <div class="sidebar-footer">
+
+            <a href="/templates/registro.html" class="btn btn-primary btn-modern w-100">
+                <i class="bi bi-person-plus-fill"></i>
+                Registrar Usuario
+            </a>
+
+            <a href="/templates/login.html" class="btn btn-light btn-modern-outline w-100 mt-3">
+                <i class="bi bi-box-arrow-right"></i>
+                Cerrar sesión
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <div class="topbar">
+
+            <div>
+                <h1 class="page-title">
+                    Comensales
+                </h1>
+                <td>Consulta de comensales para ingreso al comedor</td>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="status-pill success">
+                    <i class="bi bi-wifi"></i>
+                    Conectado
+                </div>
+                <div class="admin-profile">
+
+                    <img src="https://ui-avatars.com/api/?name=Administrador&background=2563eb&color=fff"
+                    alt="admin">
+
+                    <div>
+                        <strong>Administrador</strong>
+                        <span>Super usuario</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+<!-- FILTROS -->
+        <section class="dashboard-card mb-4">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h3>Filtros de búsqueda</h3>
+
+                    <p>
+                        consulta de comensales.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="row g-3">
+
+                <div class="col-md-9 ">
+
+                    <label class="form-label ">
+                        Cédula
+                    </label>
+                    <input type="text" class="form-control modern-input btn-modern w-100 border #0000; " placeholder="Ingrese la cédula">
+
+                </div>
+
+                
+                <div class="col-md-3 d-flex align-items-end">
+
+                    <button class="btn btn-primary btn-modern w-100">
+
+                        <i class="bi bi-search"></i>
+                        Buscar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+<div class="dashboard-card">
+
+<div class="table-title">
+
+<div>
+<p>Registro de Comensales diarios</p>
+</div>
+
+</div>
+
+<div class="table-responsive">
+
+<table class="table align-middle">
+
+<thead>
+
+<tr>
+
+<th>Cédula</th>
+<th>Nombre</th>
+<th>Apellido</th>
+<th>tipo de menu</th>
+<th>Accion</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>31.506.822</td>
+<td>Mariangel</td>
+<td>Duque</td>
+<td>Normal</td>
+
+<td>
+
+<button class="btn btn-success btn-sm">
+Ingreso
+</button>
+
+<tbody>
+
+<tr>
+<td>27.492.928</td>
+<td>Sergio</td>
+<td>Herrera</td>
+<td>Especial</td>
+
+<td>
+
+<button class="btn btn-danger btn-sm">
+Ya consumio
+</button>

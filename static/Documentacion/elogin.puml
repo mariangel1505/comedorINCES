@@ -1,0 +1,21 @@
+@startuml Diagrama_Correcto
+
+autonumber
+skinparam style strictuml
+
+actor "Funcional" as user
+participant "Sistema" as sys
+database "Base de Datos" as db
+
+== Inicio de Sesión ==
+
+user -> sys : Ingresa Cédula y Contraseña
+user -> sys : Presiona "Iniciar Sesión"
+
+sys -> db : Enviar credenciales / Verificar datos
+db --> sys : Confirmar datos correctos
+
+sys --> sys : Permitir acceso
+sys --> user : Redirigir al Inicio
+
+@enduml

@@ -1,0 +1,28 @@
+@startuml
+title Control de Acceso al Comedor
+
+[*] --> EsperandoComensal 
+
+EsperandoComensal --> VerificandoCedula
+
+VerificandoCedula --> ComensalValido : Existe
+
+VerificandoCedula -->  ComensalNoValido : No existe
+
+ComensalNoValido --> EsperandoComensal
+
+ComensalValido --> VerificandoDisponibilidad
+
+VerificandoDisponibilidad --> AccesoPermitido : No ha consumido
+
+VerificandoDisponibilidad --> AccesoDenegado : Ya consumió
+
+AccesoPermitido --> RegistrarConsumo
+
+RegistrarConsumo --> ActualizarProduccion
+
+ActualizarProduccion --> EsperandoComensal
+
+AccesoDenegado --> EsperandoComensal
+
+@enduml
